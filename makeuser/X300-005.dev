@@ -1,0 +1,35 @@
+[ComConnect]
+Port=COM1
+BaudRate=9600
+StopBits=1
+DataBits=8
+Parity=None
+FlowControl=None
+[ComProgram]
+Port=COM1
+BaudRate=115200
+StopBits=1
+DataBits=8
+Parity=None
+FlowControl=None
+[Flash]
+BootConnect=FlAsHRuN
+UserConnect=flash%0D
+ConnectResponse=FlAsHRuN
+FlashStart=0
+FlashLength=131072
+FlashCheckSeed=32768
+FlashBlockSize=4096
+FlashVerification=1
+FlashEncryption=0
+
+[MakeUser]
+Description=X300-506 Example Application
+IconFile=makeuser\RINSTRUM_32x32.ico
+HelpImageFile=makeuser\X300-005.jpg
+ExeFile=makeuser\usrflash.exe
+MotFile=output\X300-506.mot
+OutputFile=M02\X300-506-M02.exe
+[MakeUserHelpText]
+Desc0=Connect the X300-005 using
+Desc1=a serial port to the PC as shown.
