@@ -15,7 +15,6 @@
 #include "hardware.h"
 #include "registers.h"
 #include "strings.h"
-#include "buzzer.h"
 #include "database.h"
 
 TempValueDB appVariables;		// this is only for X350 special variable store

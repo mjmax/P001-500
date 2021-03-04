@@ -17,7 +17,6 @@
 #include "outputs.h"
 #include "hardware.h"
 #include "command.h"
-#include "buzzer.h"
 #include "_sprintf.h"
 #include "database.h"
 #include "eeprom.h"
@@ -564,8 +563,8 @@ char AnalogeOutput(eRegMode mode, char *str)
 char BuzzerStatus(eRegMode mode, char *str)
 {
 	char status = 0;
-	char *nonConvert;
-	uint8_t tempBuzzer;
+//	char *nonConvert;
+//	uint8_t tempBuzzer;
 
 	switch (mode)
 	{
@@ -576,13 +575,13 @@ char BuzzerStatus(eRegMode mode, char *str)
 		// nothing to read
 		break;
 	case REG_MODE_WRITE:
-		tempBuzzer = (uint8_t)strtoul(GetRegDataPointer(),&nonConvert,10);
-		if((tempBuzzer >= BUZZER_OFF) && (tempBuzzer < BUZZER_BEEP_MAX))
-		{
-			appVariables.status.buzzerStatus = tempBuzzer;
-			//setBuzzer(appVariables.status.buzzerStatus);
-		}
-		else
+//		tempBuzzer = (uint8_t)strtoul(GetRegDataPointer(),&nonConvert,10);
+//		if((tempBuzzer >= BUZZER_OFF) && (tempBuzzer < BUZZER_BEEP_MAX))
+//		{
+//			appVariables.status.buzzerStatus = tempBuzzer;
+//			setBuzzer(appVariables.status.buzzerStatus);
+//		}
+//		else
 			status = 23;		// magic 23 is responsible for write operation fail
 
 		break;

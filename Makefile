@@ -118,6 +118,7 @@ SRC += $(SRC_DIR)/_sprintf.c
 SRC += $(SRC_DIR)/eeprom.c
 SRC += $(SRC_DIR)/database.c
 SRC += $(SRC_DIR)/clock.c
+SRC += $(SRC_DIR)/systems.c
 
 # List of all source directories
 SRC_DIRS = $(SRC_DIR)
