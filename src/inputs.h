@@ -23,11 +23,15 @@ typedef struct{
 		uint8_t external;
 }input_t;
 
+typedef enum {PULSE_1 = 0, PULSE_2, PULSE_3, PULSE_4, MAX_PULSE}pulseName_t;
+
 void inputs_init(void);
 void init_read_port_A(void);
 input_t get_inputs(void);
 void SetInputInterruptFlag(bool flag);
 bool GetInputInterruptFlag(void);
+uint16_t getPulseWidth(uint8_t pulseName);
+void setPulseWidth(uint8_t pulseName, uint16_t pulseWidth);
 
 
 #endif /* INPUTS_H_ */

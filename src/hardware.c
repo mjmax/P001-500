@@ -12,7 +12,6 @@
 #include "outputs.h"
 #include "registers.h"
 #include "hardware.h"
-#include "buzzer.h"
 #include "asciidef.h"
 #include "sci.h"
 #include "database.h"
