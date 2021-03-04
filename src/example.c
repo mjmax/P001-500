@@ -20,6 +20,7 @@
 #include "eeprom.h"
 #include "database.h"
 #include "clock.h"
+#include "systems.h"
 
 
 static uint_farptr_t the_user_flash_func_ptr = NULL;
@@ -127,6 +128,7 @@ int main(uint_farptr_t user_flash_func_ptr)
   //send_menu(&usart2_stream);
   while (true)
   {
+  	idle();
   	if(!IsConfigMode())
   		AutomaticSyncData();
 
