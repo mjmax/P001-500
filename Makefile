@@ -94,8 +94,7 @@ RELEASE_M05_TARGET = $(M05_DIR)/$(TARGET)-$(VERSION)-M05.zip
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(SRC_DIR)/buzzer.c
-SRC += $(SRC_DIR)/example.c
+SRC = $(SRC_DIR)/example.c
 SRC += $(SRC_DIR)/fifo_flush.c
 SRC += $(SRC_DIR)/fifo_free.c
 SRC += $(SRC_DIR)/fifo_getchar.c
@@ -118,6 +117,7 @@ SRC += $(SRC_DIR)/sci.c
 SRC += $(SRC_DIR)/_sprintf.c
 SRC += $(SRC_DIR)/eeprom.c
 SRC += $(SRC_DIR)/database.c
+SRC += $(SRC_DIR)/clock.c
 
 # List of all source directories
 SRC_DIRS = $(SRC_DIR)

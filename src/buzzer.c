@@ -102,33 +102,33 @@ void InitBuzzer(void)
  *
  */
 void IntTimer(void){
-	TCD0.CTRLA=TC_CLKSEL_OFF_gc;
-	TCD0.CTRLB=TC_WGMODE_NORMAL_gc;		// counter in normal operation
-	TCD0.INTCTRLA=TC_OVFINTLVL_HI_gc;
-	TCD0.PER = 1800; //18000 for 1 second
-	TCD0.CTRLA=TC_CLKSEL_DIV1024_gc;
+//	TCD0.CTRLA=TC_CLKSEL_OFF_gc;
+//	TCD0.CTRLB=TC_WGMODE_NORMAL_gc;		// counter in normal operation
+//	TCD0.INTCTRLA=TC_OVFINTLVL_HI_gc;
+//	TCD0.PER = 1800; //18000 for 1 second
+//	TCD0.CTRLA=TC_CLKSEL_DIV1024_gc;
 
 }
 
 
-ISR(TCD0_OVF_vect){
-
-	if(buzzerCount>0){
-		if(BUZZER){
-			BUZZER=OFF;
-			buzzerCount--;
-		}
-		else{
-			BUZZER=ON;
-		}
-	}
-	else{
-		TCD0.CTRLA=TC_CLKSEL_OFF_gc;
-		TCD0.PER = 1800; //500ms
-		TCD0.CTRLA=TC_CLKSEL_DIV1024_gc;
-	}
-
-}
+//ISR(TCD0_OVF_vect){
+//
+//	if(buzzerCount>0){
+//		if(BUZZER){
+//			BUZZER=OFF;
+//			buzzerCount--;
+//		}
+//		else{
+//			BUZZER=ON;
+//		}
+//	}
+//	else{
+//		TCD0.CTRLA=TC_CLKSEL_OFF_gc;
+//		TCD0.PER = 1800; //500ms
+//		TCD0.CTRLA=TC_CLKSEL_DIV1024_gc;
+//	}
+//
+//}
 void beep(void){
 	buzzerCount=1;
 }

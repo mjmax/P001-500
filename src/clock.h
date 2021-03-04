@@ -12,4 +12,10 @@
 #define CLOCK_FREQ 18432000UL
 
 
+void initMicroSecTimer(void);
+
+void IntTimers(void);
+uint16_t clockMicroSec(void);
+
+
 #endif /* CLOCK_H_ */
