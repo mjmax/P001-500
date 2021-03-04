@@ -6,7 +6,6 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include "vectatxmega128d3.h"
-#include "buzzer.h"
 #include "usart_int.h"
 #include "hardware.h"
 #include "wand.h"
@@ -20,6 +19,7 @@
 #include "_sprintf.h"
 #include "eeprom.h"
 #include "database.h"
+#include "clock.h"
 
 
 static uint_farptr_t the_user_flash_func_ptr = NULL;
@@ -121,6 +121,7 @@ int main(uint_farptr_t user_flash_func_ptr)
   sei();
   InitAppDBs();
   init_hardware();
+  IntTimers();
   SetConfigMode(false);
   the_user_flash_func_ptr = user_flash_func_ptr;
   //send_menu(&usart2_stream);

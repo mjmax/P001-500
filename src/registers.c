@@ -580,7 +580,7 @@ char BuzzerStatus(eRegMode mode, char *str)
 		if((tempBuzzer >= BUZZER_OFF) && (tempBuzzer < BUZZER_BEEP_MAX))
 		{
 			appVariables.status.buzzerStatus = tempBuzzer;
-			setBuzzer(appVariables.status.buzzerStatus);
+			//setBuzzer(appVariables.status.buzzerStatus);
 		}
 		else
 			status = 23;		// magic 23 is responsible for write operation fail

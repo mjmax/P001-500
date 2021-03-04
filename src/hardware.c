@@ -291,7 +291,6 @@ void init_hardware(void)
   init_sc_buffers();
   inputs_init();
   outputs_init();
-  InitBuzzer();
   init_read_port_A();
 }
 
